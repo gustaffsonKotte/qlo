@@ -1,0 +1,14 @@
+# secrets — never commit
+config.json
+
+# data the bot accumulates
+users.json
+tracking.csv
+tracking_active.json
+webhook_id.txt
+*.log
+
+# python
+venv/
+__pycache__/
+*.pyc
