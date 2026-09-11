@@ -33,7 +33,7 @@ It is a filter, not a crystal ball. Most of these tokens still go to zero.
 ## Setup
 
 ```bash
-git clone https://github.com/YOURNAME/qlo.git
+git clone https://github.com/gustaffsonKotte/qlo.git
 cd qlo
 python3 -m venv venv
 ./venv/bin/pip install -r requirements.txt
