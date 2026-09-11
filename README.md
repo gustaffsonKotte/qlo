@@ -60,30 +60,4 @@ Then:
 Point Telegram at the bot endpoint:
 
 ```bash
-curl "https://api.telegram.org/bot<TOKEN>/setWebhook?url=https://your-domain.com/tg"
-```
-
-Your endpoint must be reachable over https. A reverse proxy in front of
-port 8091 is the usual arrangement.
-
-### Channel gating
-
-If `channel` is set, the bot has to be an **admin of that channel** —
-Telegram will not answer membership questions otherwise. It needs no
-permissions beyond the admin status itself, and it never posts anything
-there.
-
-## Cost
-
-Helius free tier gives a million credits a month. This uses roughly
-270,000 of them: about 120,000 for the webhook stream and the rest for
-looking up token ages. No paid services anywhere.
-
-## Files it writes
-
-`users.json`, `webhook_id.txt` and any logs stay local and are gitignored
-along with `config.json`. Nothing is sent anywhere except Telegram.
-
-## License
-
-MIT
+cur
