@@ -1,0 +1,7 @@
+{
+  "tg_token": "PUT_YOUR_BOT_TOKEN_HERE",
+  "helius_key": "PUT_YOUR_HELIUS_API_KEY_HERE",
+  "webhook_url": "https://your-domain.com/hook",
+  "channel": "@your_channel_or_empty_string",
+  "min_age_hours": 6
+}
