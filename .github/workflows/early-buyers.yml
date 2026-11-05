@@ -1,0 +1,33 @@
+name: Early buyers tests
+
+on:
+  push:
+    paths:
+      - 'examples/early-buyers/**'
+      - '.github/workflows/early-buyers.yml'
+  pull_request:
+    paths:
+      - 'examples/early-buyers/**'
+      - '.github/workflows/early-buyers.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: examples/early-buyers
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check Python syntax
+        run: python -m py_compile scanner.py test_scanner.py
+      - name: Run offline regression tests
+        run: python -m unittest -v
+      - name: Check CLI
+        run: python scanner.py --help
